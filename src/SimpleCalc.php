@@ -3,9 +3,12 @@ namespace SimpleCalc;
 
 class SimpleCalc
 {
-    public function add10Percent($value)
+    public function addPercentage($value, $percentage)
     {
-        $result = $value + (abs($value) * 0.1);
+        if (!is_numeric($percentage) || $percentage < 0) {
+            throw new \Exception('Invalid Percentage');
+        }
+        $result = $value + (abs($value) * ($percentage / 100));
         if ((int)$result == $result) {
             $result = (int)$result;
         }
