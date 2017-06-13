@@ -17,5 +17,6 @@ class SimpleCalc
 
     public function dummy() 
     {
+
     }
 }
