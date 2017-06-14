@@ -14,9 +14,4 @@ class SimpleCalc
         }
         return $result;        
     }
-
-    public function dummy() 
-    {
-
-    }
 }
